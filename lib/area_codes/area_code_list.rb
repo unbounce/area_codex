@@ -8,7 +8,7 @@ module AreaCodes
 
     def initialize(*area_code_files)
       @area_codes = Set.new
-      load_area_codes(area_code_files)
+      load_area_codes(area_code_files.flatten)
     end
 
     def_delegator :@area_codes, :include?, :include?

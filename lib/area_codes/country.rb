@@ -9,6 +9,7 @@ module AreaCodes
 
     def_delegator :@area_code_list, :include?, :include?
     def_delegator :@area_code_list, :exclude?, :exclude?
+    def_delegator :@area_code_list, :area_codes, :area_codes
 
     private
 

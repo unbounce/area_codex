@@ -19,7 +19,7 @@ class RegionTest < Test::Unit::TestCase
   def test_include?
     assert_equal( true, region(@real_name).include?(604) )
     assert_equal( false, region(@real_name).include?(666) )
-   end
+  end
 
   def test_exclude?
     assert_equal( false, region(@real_name).exclude?(604) )

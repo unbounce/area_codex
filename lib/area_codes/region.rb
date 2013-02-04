@@ -1,7 +1,7 @@
 module AreaCodes
   class Region
     extend Forwardable
-    
+
     NORTH_AMERICA = [:canada, :mexico, :united_states]
 
     def initialize(region_name)
@@ -11,6 +11,7 @@ module AreaCodes
 
     def_delegator :@area_code_list, :include?, :include?
     def_delegator :@area_code_list, :exclude?, :exclude?
+    def_delegator :@area_code_list, :area_codes, :area_codes
 
     private
 
