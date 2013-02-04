@@ -12,17 +12,23 @@ class AreaCodeListTest < Test::Unit::TestCase
   end
 
   def test_initialize
-    assert_equal( true, list(@single).area_codes.instance_of?(Set) )
-    assert_equal( false, list(@single).area_codes.empty? )
+    [@single, @multiple].each do |list_size|
+      assert_equal( true, list(list_size).area_codes.instance_of?(Set) )
+      assert_equal( false, list(list_size).area_codes.empty? )
+    end
   end
 
   def test_include?
-    assert_equal( true, list(@single).include?(604) )
-    assert_equal( false, list(@single).include?(666) )
+    [@single, @multiple].each do |list_size|
+      assert_equal( true, list(list_size).include?(604) )
+      assert_equal( false, list(list_size).include?(666) )
+    end
   end
 
   def test_exclude?
-    assert_equal( false, list(@single).exclude?(604) )
-    assert_equal( true, list(@single).exclude?(666) )
+    [@single, @multiple].each do |list_size|
+      assert_equal( false, list(list_size).exclude?(604) )
+      assert_equal( true, list(list_size).exclude?(666) )
+    end
   end
 end
