@@ -23,8 +23,10 @@ module AreaCodes
         area_code_files.each do |file_name|
           file_path = File.expand_path("../../data/#{file_name}", __FILE__)
 
-          File.open( file_path ) do |file|
-            @area_codes.merge( Set.new( file.readlines.map { |code| code.chop.to_i } ) )
+          if File.exists?( file_path )
+            File.open( file_path ) do |file|
+              @area_codes.merge( Set.new( file.readlines.map { |code| code.chop.to_i } ) )
+            end
           end
         end
       end

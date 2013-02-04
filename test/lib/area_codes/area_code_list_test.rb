@@ -3,8 +3,7 @@ require_relative '../../test_helper'
 class AreaCodeListTest < Test::Unit::TestCase
 
   def setup
-    @file_name = 'canada.txt'
-    @area_code_list = AreaCodes::AreaCodeList.new(@file_name)
+    @area_code_list = AreaCodes::AreaCodeList.new('canada.txt')
   end
 
   def test_initialize
