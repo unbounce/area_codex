@@ -1,6 +1,6 @@
 module AreaCodex
   module WithAreaCodes
-    extend Forwardable
+    extend ::Forwardable
 
     def_delegator :@area_code_list, :include?, :include?
     def_delegator :@area_code_list, :exclude?, :exclude?
