@@ -1,7 +1,6 @@
 module AreaCodex
   class Region < Base
-    require 'forwardable'
-    extend Forwardable
+    include WithAreaCodes
 
     NORTH_AMERICA = [:canada, :mexico, :united_states]
 
@@ -9,10 +8,6 @@ module AreaCodex
       @name = constantize(name)
       super()
     end
-
-    def_delegator :@area_code_list, :include?, :include?
-    def_delegator :@area_code_list, :exclude?, :exclude?
-    def_delegator :@area_code_list, :area_codes, :area_codes
 
     private
 

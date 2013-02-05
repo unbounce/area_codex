@@ -1,18 +1,11 @@
 module AreaCodex
   class Country < Base
-    require 'forwardable'
-    extend Forwardable
+    include WithAreaCodes
 
     def initialize(name)
       @name = normalize(name)
       super()
-
-      puts ">> HEY"
     end
-
-    def_delegator :@area_code_list, :include?, :include?
-    def_delegator :@area_code_list, :exclude?, :exclude?
-    def_delegator :@area_code_list, :area_codes, :area_codes
 
     private
 
