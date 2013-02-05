@@ -1,17 +1,16 @@
+require 'concerns/with_area_codes'
+
 module AreaCodex
-  class Region
-    extend Forwardable
+  class Region < AreaCodex::Base
+    include AreaCodex::WithAreaCodes
 
     NORTH_AMERICA = [:canada, :mexico, :united_states]
 
     def initialize(region_name)
+      super()
       @region_name = constantize(region_name)
       @area_code_list = AreaCodex::AreaCodeList.new(area_code_files)
     end
-
-    def_delegator :@area_code_list, :include?, :include?
-    def_delegator :@area_code_list, :exclude?, :exclude?
-    def_delegator :@area_code_list, :area_codes, :area_codes
 
     private
 
