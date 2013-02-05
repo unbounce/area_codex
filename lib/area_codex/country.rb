@@ -4,10 +4,9 @@ module AreaCodex
   class Country < AreaCodex::Base
     include AreaCodex::WithAreaCodes
 
-    def initialize(country_name)
+    def initialize(name)
+      @name = normalize(name)
       super()
-      @country_name = normalize(country_name)
-      @area_code_list = AreaCodex::AreaCodeList.new(area_code_files)
     end
 
     private
@@ -17,7 +16,7 @@ module AreaCodex
       end
 
       def area_code_files
-        "#{@country_name}.txt"
+        "#{@name}.txt"
       end
   end
 end

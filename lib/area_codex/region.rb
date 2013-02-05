@@ -6,10 +6,9 @@ module AreaCodex
 
     NORTH_AMERICA = [:canada, :mexico, :united_states]
 
-    def initialize(region_name)
+    def initialize(name)
+      @name = constantize(name)
       super()
-      @region_name = constantize(region_name)
-      @area_code_list = AreaCodex::AreaCodeList.new(area_code_files)
     end
 
     private
@@ -21,7 +20,7 @@ module AreaCodex
       end
 
       def area_code_files
-        @region_name.map { |sym| "#{sym}.txt" }
+        @name.map { |sym| "#{sym}.txt" }
       end
   end
 end
