@@ -1,6 +1,6 @@
 require 'set'
 
-module AreaCodes
+module AreaCodex
   class AreaCodeList
     extend Forwardable
 

@@ -8,7 +8,7 @@ class AreaCodeListTest < Test::Unit::TestCase
   end
 
   def list(file_names)
-    AreaCodes::AreaCodeList.new(file_names)
+    AreaCodex::AreaCodeList.new(file_names)
   end
 
   def test_initialize

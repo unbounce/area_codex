@@ -8,12 +8,12 @@ class RegionTest < Test::Unit::TestCase
   end
 
   def region(name)
-    AreaCodes::Region.new(name)
+    AreaCodex::Region.new(name)
   end
 
   def test_initialize
-    assert_raise( NameError ) { AreaCodes::Region.new(@fake_name) }
-    assert_equal( true, region(@real_name).instance_of?(AreaCodes::Region) )
+    assert_raise( NameError ) { AreaCodex::Region.new(@fake_name) }
+    assert_equal( true, region(@real_name).instance_of?(AreaCodex::Region) )
   end
 
   def test_include?

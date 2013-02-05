@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 
-require File.expand_path('../../lib/area_codes.rb', __FILE__)
+require File.expand_path('../../lib/area_codex.rb', __FILE__)
 
 require 'rubygems'
 require 'bundler'
@@ -21,7 +21,7 @@ require 'shoulda-context'
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-require 'area_codes'
+require 'area_codex'
 
 class Test::Unit::TestCase
 end

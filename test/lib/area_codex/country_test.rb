@@ -8,12 +8,12 @@ class CountryTest < Test::Unit::TestCase
     end
 
     def country(name)
-      AreaCodes::Country.new(name)
+      AreaCodex::Country.new(name)
     end
 
     def test_initialize
-      assert_equal( true, country(@fake_name).instance_of?(AreaCodes::Country) )
-      assert_equal( true, country(@real_name).instance_of?(AreaCodes::Country) )
+      assert_equal( true, country(@fake_name).instance_of?(AreaCodex::Country) )
+      assert_equal( true, country(@real_name).instance_of?(AreaCodex::Country) )
     end
 
     def test_include?

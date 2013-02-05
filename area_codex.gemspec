@@ -2,11 +2,11 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-require 'area_codes/version'
+require 'area_codex/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "area_codes"
-  gem.version       = AreaCodes::VERSION
+  gem.name          = "area_codex"
+  gem.version       = AreaCodex::VERSION
   gem.authors       = ["Chris Cummer"]
   gem.email         = ["chris@unbounce.com"]
   gem.description   = %q{Phone number area code lookup by region.}

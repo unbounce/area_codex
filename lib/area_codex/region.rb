@@ -1,4 +1,4 @@
-module AreaCodes
+module AreaCodex
   class Region
     extend Forwardable
 
@@ -6,7 +6,7 @@ module AreaCodes
 
     def initialize(region_name)
       @region_name = constantize(region_name)
-      @area_code_list = AreaCodeList.new(area_code_files)
+      @area_code_list = AreaCodex::AreaCodeList.new(area_code_files)
     end
 
     def_delegator :@area_code_list, :include?, :include?

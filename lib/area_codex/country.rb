@@ -1,10 +1,10 @@
-module AreaCodes
+module AreaCodex
   class Country
     extend Forwardable
 
     def initialize(country_name)
       @country_name = normalize(country_name)
-      @area_code_list = AreaCodeList.new(area_code_file)
+      @area_code_list = AreaCodex::AreaCodeList.new(area_code_file)
     end
 
     def_delegator :@area_code_list, :include?, :include?
