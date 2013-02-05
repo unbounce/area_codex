@@ -11,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["chris@unbounce.com"]
   gem.description   = %q{Phone number area code lookup by region.}
   gem.summary       = %q{A list of phone number area codes by country. Currently only supports Canada, the United States, and Mexico.}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/unbounce/area_codex"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
