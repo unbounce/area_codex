@@ -1,6 +1,5 @@
 require_relative '../../test_helper'
 
-#class AreaCodeListTest < Test::Unit::TestCase
 class TestAreaCodeList < MiniTest::Unit::TestCase
 
   def setup

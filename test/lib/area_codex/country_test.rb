@@ -1,6 +1,5 @@
 require_relative '../../test_helper'
 
-#class CountryTest < Test::Unit::TestCase
 class TestCounty < MiniTest::Unit::TestCase
   
     def setup
