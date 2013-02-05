@@ -21,8 +21,14 @@ Or install it yourself as:
 
 ### By Country
 
+Currently only Canada, Mexico and the United States are supported.
+
     AreaCodex::Country.new(:canada).include?(604)  # => true
     AreaCodex::Country.new(:canada).exclude?(213)  # => true
+
+### By Region
+
+Currently only North America is supported.
 
     AreaCodex::Region.new(:north_america).include?(604)  # => true
     AreaCodex::Region.new(:north_america).exclude?(213)  # => false
