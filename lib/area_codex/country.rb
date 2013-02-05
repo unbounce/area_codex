@@ -1,5 +1,3 @@
-require 'concerns/with_area_codes'
-
 module AreaCodex
   class Country < Base
     include WithAreaCodes
