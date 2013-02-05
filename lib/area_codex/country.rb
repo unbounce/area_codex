@@ -14,7 +14,7 @@ module AreaCodex
     private
 
       def normalize(country_name)
-        country_name.downcase.gsub(' ', '_').to_sym
+        country_name.to_s.downcase.gsub(' ', '_').to_sym
       end
 
       def area_code_file

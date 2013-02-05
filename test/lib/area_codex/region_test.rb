@@ -1,6 +1,7 @@
 require_relative '../../test_helper'
 
-class RegionTest < Test::Unit::TestCase
+#class RegionTest < Test::Unit::TestCase
+class TestRegion < MiniTest::Unit::TestCase
 
   def setup
     @fake_name = 'Freeside'
@@ -12,17 +13,21 @@ class RegionTest < Test::Unit::TestCase
   end
 
   def test_initialize
-    assert_raise( NameError ) { AreaCodex::Region.new(@fake_name) }
+    assert_raises( NameError ) { AreaCodex::Region.new(@fake_name) }
     assert_equal( true, region(@real_name).instance_of?(AreaCodex::Region) )
   end
 
   def test_include?
-    assert_equal( true, region(@real_name).include?(604) )
-    assert_equal( false, region(@real_name).include?(666) )
+    [@real_name, @real_name.to_sym].each do |name|
+      assert_equal( true, region(name).include?(604) )
+      assert_equal( false, region(name).include?(666) )
+    end
   end
 
   def test_exclude?
-    assert_equal( false, region(@real_name).exclude?(604) )
-    assert_equal( true, region(@real_name).exclude?(666) )
+    [@real_name, @real_name.to_sym].each do |name|
+      assert_equal( false, region(name).exclude?(604) )
+      assert_equal( true, region(name).exclude?(666) )
+    end
   end
 end

@@ -14,14 +14,11 @@ rescue Bundler::BundlerError => e
   exit e.status_code
 end
 
-require 'test/unit'
-require 'shoulda'
-require 'shoulda-context'
+#require 'test/unit'
+#require 'shoulda'
+#require 'shoulda-context'
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
 require 'area_codex'
-
-class Test::Unit::TestCase
-end

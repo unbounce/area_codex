@@ -16,7 +16,7 @@ module AreaCodex
     private
 
       def constantize(region_name)
-        name = region_name.upcase.gsub(' ', '_')
+        name = region_name.to_s.upcase.gsub(' ', '_')
         klass = self.class
         klass.const_defined?(name) ? klass.const_get(name) : klass.const_missing(name)
       end

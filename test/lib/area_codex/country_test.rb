@@ -1,7 +1,8 @@
 require_relative '../../test_helper'
 
-class CountryTest < Test::Unit::TestCase
-
+#class CountryTest < Test::Unit::TestCase
+class TestCounty < MiniTest::Unit::TestCase
+  
     def setup
       @fake_name = 'Freeside'
       @real_name = 'Canada'
@@ -17,11 +18,15 @@ class CountryTest < Test::Unit::TestCase
     end
 
     def test_include?
-      assert_equal( false, country(@fake_name).include?(604) )
-      assert_equal( false, country(@fake_name).include?(666) )
+      [@fake_name, @fake_name.to_sym].each do |name|
+        assert_equal( false, country(name).include?(604) )
+        assert_equal( false, country(name).include?(666) )
+      end
 
-      assert_equal( true, country(@real_name).include?(604) )
-      assert_equal( false, country(@real_name).include?(666) )
+      [@real_name, @real_name.to_s].each do |name|
+        assert_equal( true, country(name).include?(604) )
+        assert_equal( false, country(name).include?(666) )
+      end
     end
 
     def test_exclude?
