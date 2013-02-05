@@ -1,8 +1,8 @@
 require 'concerns/with_area_codes'
 
 module AreaCodex
-  class Country < AreaCodex::Base
-    include AreaCodex::WithAreaCodes
+  class Country < Base
+    include WithAreaCodes
 
     def initialize(name)
       @name = normalize(name)

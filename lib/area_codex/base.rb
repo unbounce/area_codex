@@ -2,7 +2,7 @@ module AreaCodex
   class Base
 
     def initialize
-      @area_code_list = AreaCodex::AreaCodeList.new(area_code_files)
+      @area_code_list = AreaCodeList.new(area_code_files)
     end
 
     def area_code_files

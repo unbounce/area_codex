@@ -1,8 +1,8 @@
 require 'concerns/with_area_codes'
 
 module AreaCodex
-  class Region < AreaCodex::Base
-    include AreaCodex::WithAreaCodes
+  class Region < Base
+    include WithAreaCodes
 
     NORTH_AMERICA = [:canada, :mexico, :united_states]
 
