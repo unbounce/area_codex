@@ -1,7 +1,7 @@
 require_relative '../../test_helper'
 
 class TestCounty < MiniTest::Unit::TestCase
-  
+
     def setup
       @fake_name = 'Freeside'
       @real_name = 'Canada'

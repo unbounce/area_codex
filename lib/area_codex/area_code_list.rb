@@ -2,6 +2,7 @@ require 'set'
 
 module AreaCodex
   class AreaCodeList
+    require 'forwardable'
     extend Forwardable
 
     attr_reader :area_codes
@@ -9,6 +10,8 @@ module AreaCodex
     def initialize(*area_code_files)
       @area_codes = Set.new
       load_area_codes(area_code_files.flatten)
+
+      puts ">> OK"
     end
 
     def_delegator :@area_codes, :include?, :include?
