@@ -1,6 +1,7 @@
 # AreaCodex
 
-TODO: Write a gem description
+A ruby gem for determining whether or not a given phone area code is in
+a particular country or region.
 
 ## Installation
 
@@ -18,7 +19,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### By Country
+
+    AreaCodex::Country.new(:canada).include?(604)  # => true
+    AreaCodex::Country.new(:canada).exclude?(213)  # => true
+
+    AreaCodex::Region.new(:north_america).include?(604)  # => true
+    AreaCodex::Region.new(:north_america).exclude?(213)  # => false
 
 ## Contributing
 
